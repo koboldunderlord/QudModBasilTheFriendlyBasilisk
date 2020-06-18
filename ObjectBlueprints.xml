@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+  <object Name="BasilTheFriendlyBasilisk" Inherits="Croc">
+    <part Name="Render" DisplayName="&amp;GBasil the Friendly Basilisk" RenderString="r"  Tile="BasilTheFriendlyBasilisk.png" DetailColor="w" ColorString="&amp;G" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="Basil's Corpse" BodyDrop="true" InventoryDrop="true" />
+    <stat Name="ColdResistance" Value="50"></stat>
+    <stat Name="ElectricResistance" Value="50"></stat>
+    <part Name="Brain" Hostile="false" Factions="Unshelled Reptiles-100" />
+    <part Name="Description" Short="Basil the Friendly Basilisk stands before you and looks at you with an adorable gleam in =pronouns.possessive= eyes.  You can really tell =pronouns.subjective= =verb:love:afterpronoun= you! =pronouns.Subjective==verb:'re:afterpronoun= naught but a silly little croc with a silly little hat and a silly set of fangs and claws to make silly string with." />
+    <stat Name="Hitpoints" Value="30" />
+    <stat Name="Level" Value="5" />
+    <stat Name="AV" Value="9" />
+    <mutation Name="HeightenedSmell" Level="3" />
+    <inventoryobject Blueprint="Basil's Teeth" Number="1" />
+    <inventoryobject Blueprint="Basil's Claw" Number="2" />
+    <inventoryobject Blueprint="Wide-brimmed Hat" Number="1" />
+    <tag Name="Gender" Value="male" />
+    <tag Name="PronounSet" Value="they/them" />
+    <xtagGrammar Proper="true" />
+    <skill Name="Endurance" />
+    <skill Name="ShortBlades" />
+    <skill Name="ShortBlades_Expertise" />
+    <property Name="Role" Value="Hero" />
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+    <tag Name="Species" Value="gecko" />
+    <tag Name="Pet"/>
+    <tag Name="StartingPet"/>
+    <part Name="Pettable" />
+    <tag Name="SpecialPetResponse" Value="&amp;GBasil&amp;y gets a goofy smile on his face." />
+    <tag Name="PetResponse" Value="smiles a goofy smile" />
+  </object>
+  <object Name="Basil's Teeth" Inherits="NaturalWeapon">
+    <part Name="Render" DisplayName="&amp;Gsilly teeth" />
+    <part Name="MeleeWeapon" BaseDamage="1d4" Skill="ShortBlades" Stat="Strength" Slot="Face" />
+    <part Name="VibroWeapon" ChargeUse="0" />
+  </object>
+  <object Name="Basil's Claw" Inherits="NaturalWeapon">
+    <part Name="Render" DisplayName="&amp;Gsilly claw" />
+    <part Name="MeleeWeapon" BaseDamage="1d3" Skill="ShortBlades" Stat="Strength" Slot="Foot" />
+    <part Name="VibroWeapon" ChargeUse="0" />
+  </object>
+  <object Name="Basil's Corpse" Inherits="Corpse">
+    <part Name="Butcherable" OnSuccess="Taste of Friendship" />
+    <part Name="Render" DisplayName="&amp;GBasil's corpse" ColorString="&amp;G" />
+    <part Name="Physics" Weight="200" />
+  </object>
+  <object Name="Taste of Friendship" Inherits="Raw Meat">
+    <part Name="Render" DisplayName="&amp;rraw friendship meat" Tile="Items/sw_rawmeat3.bmp" />
+    <part Name="Description" Short="The processed remains of your best friend." />
+    <part Name="Food" Message="You feel a tear run down your cheek remembering the world your best friend meant to you." />
+    <part Name="Physics" Weight="3" />
+    <part Name="Commerce" Value="10" />
+  </object>
+</objects>
